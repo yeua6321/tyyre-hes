@@ -3,7 +3,8 @@ RUN apk add --no-cache git
 RUN git clone -b v3 https://github.com/Hideipnetwork/hideipnetwork-web.git /hnet
 
 FROM node:alpine
-WORKDIR /app/usr/app
+EXPOSE 56559
+WORKDIR /usr/app
 USER root
 
 COPY --from=builder /hnet .
