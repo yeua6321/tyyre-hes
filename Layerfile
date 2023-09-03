@@ -19,4 +19,4 @@ COPY . .
 
 RUN docker build -t image .
 RUN docker run -d -p 80:56559 image
-EXPOSE WEBSITE http://localhost:56559
+EXPOSE WEBSITE http://localhost:80
